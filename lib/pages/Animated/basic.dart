@@ -21,6 +21,7 @@ class _AnimatedPageState extends State<AnimatedPage> {
                 width: 200,
                 height: _height,
                 color: Colors.blue,
+                // curve: ,
                 child: Text('11'),
               ),
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:widget_details/pages/Animated/Animatedswitcher.dart';
+import 'package:widget_details/pages/Animated/AnimatedSwitcher.dart';
 import 'package:widget_details/pages/Animated/TweenAnimationBuilder.dart';
 import 'package:widget_details/pages/Animated/basic.dart';
 import 'package:widget_details/pages/Home/AlertDialog/basic.dart';
@@ -35,6 +35,7 @@ import 'package:widget_details/pages/demo/Navigtor/page/D.dart';
 import 'package:widget_details/pages/demo/Navigtor/page/E.dart';
 import 'package:widget_details/pages/demo/provider/basic.dart';
 import 'package:widget_details/pages/demo/util/basic.dart';
+import 'package:widget_details/pages/demo/stream/basic.dart';
 
 final routes = {
   '/scaffoldPage': (context) => ScaffoldPage(),
@@ -73,6 +74,7 @@ final routes = {
   '/centerPage':(context) =>AlignPage(),
   '/pageViewPage':(context) =>PageViewPage(),
   '/flow':(context) =>FlowBasicPage(),
+  '/streamPage':(context) =>StreamPage(),
 };
 
 final initRoute = '/';

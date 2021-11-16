@@ -35,6 +35,9 @@ class _DemoTabState extends State<DemoTab> {
           ElevatedButton(
               onPressed: () => {Navigator.pushNamed(context, '/changeNotifier')},
               child: Text('ChangeNotifier')),
+          ElevatedButton(
+              onPressed: () => {Navigator.pushNamed(context, '/streamPage')},
+              child: Text('stream')),
         ],
       ),
     );
