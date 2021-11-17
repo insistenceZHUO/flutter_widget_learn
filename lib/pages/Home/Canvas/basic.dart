@@ -9,11 +9,11 @@ class CanvasPage extends StatefulWidget {
 
 class _CanvasPageState extends State<CanvasPage> {
   var paint = CustomPaint(
-    size: Size(100,100),
+    size: Size(100, 100),
     painter: MyPainter(),
   );
   var _painterFillCircle = CustomPaint(
-    size: Size(100,100),
+    size: Size(100, 100),
     painter: PainterFillCircle(),
   );
 
@@ -30,16 +30,25 @@ class _CanvasPageState extends State<CanvasPage> {
       ),
       body: ListView(
         children: [
-          Container(
-            alignment: Alignment.center,
-            child: paint),
-
+          Container(alignment: Alignment.center, child: paint),
           Container(
             alignment: Alignment.center,
             child: _myPaintBasice,
-          ),   Container(
+          ),
+          Container(
             alignment: Alignment.center,
             child: _painterFillCircle,
+          ),
+          Wrap(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/paintBasic');
+                },
+                child: Text('Paint'),
+              ),
+              // ElevatedButton(onPressed: () {}, child: Text('Paint')),
+            ],
           )
         ],
       ),
@@ -50,16 +59,15 @@ class _CanvasPageState extends State<CanvasPage> {
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-       Rect rect = Offset.zero & size;
-       canvas.save();
-       canvas.clipRRect(new RRect.fromRectXY(rect, 50.0, 50.0));
-       canvas.saveLayer(rect, Paint());
-       canvas.drawPaint(new Paint()..color = Colors.red);
-       canvas.drawPaint(new Paint()..color = Colors.blue);
-       canvas.restore();
-       canvas.restore();
+    Rect rect = Offset.zero & size;
+    canvas.save();
+    canvas.clipRRect(new RRect.fromRectXY(rect, 50.0, 50.0));
+    canvas.saveLayer(rect, Paint());
+    canvas.drawPaint(new Paint()..color = Colors.red);
+    canvas.drawPaint(new Paint()..color = Colors.blue);
+    canvas.restore();
+    canvas.restore();
   }
-
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
@@ -67,9 +75,8 @@ class MyPainter extends CustomPainter {
   }
 }
 
-
 /// 绘制一个圆
-class PainterBasic extends CustomPainter{
+class PainterBasic extends CustomPainter {
   late Paint _paint;
 
   @override
@@ -87,7 +94,8 @@ class PainterBasic extends CustomPainter{
     _paint.strokeWidth = 5;
 
     /// 绘制一个圆;
-    canvas.drawCircle(Offset(size.width /2, size.height /2), size.width /2, _paint);
+    canvas.drawCircle(
+        Offset(size.width / 2, size.height / 2), size.width / 2, _paint);
   }
 
   @override
@@ -97,8 +105,8 @@ class PainterBasic extends CustomPainter{
 /// 绘制一个实心圆;
 
 class PainterFillCircle extends CustomPainter {
-
   late Paint _paint;
+
   @override
   void paint(Canvas canvas, Size size) {
     /// 创建一个画笔;
@@ -107,13 +115,14 @@ class PainterFillCircle extends CustomPainter {
     _paint.color = Colors.red;
     _paint.style = PaintingStyle.fill;
     _paint.strokeWidth = 5;
+
     /// 绘制一个圆;
-    canvas.drawCircle(Offset(size.width /2, size.height /2), size.width /2, _paint);
+    canvas.drawCircle(
+        Offset(size.width / 2, size.height / 2), size.width / 2, _paint);
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
     return true;
   }
-
 }

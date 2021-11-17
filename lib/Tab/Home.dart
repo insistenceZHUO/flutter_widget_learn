@@ -13,6 +13,8 @@ class _HomeTabState extends State<HomeTab> {
         title: Text('home'),
       ),
       body: Wrap(
+        runSpacing: 2,
+        spacing: 4,
         children: [
           ElevatedButton(
               onPressed: () => {Navigator.pushNamed(context, '/scaffoldPage')},
@@ -81,6 +83,16 @@ class _HomeTabState extends State<HomeTab> {
                 Navigator.pushNamed(context, '/flow');
               },
               child: Text('flow')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/steamBuilder');
+              },
+              child: Text('SteamBuilder')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/printBasic');
+              },
+              child: Text('Paint')),
         ],
       ),
     );

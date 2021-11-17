@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:widget_details/pages/Animated/AnimatedSwitcher.dart';
 import 'package:widget_details/pages/Animated/TweenAnimationBuilder.dart';
 import 'package:widget_details/pages/Animated/basic.dart';
+import 'package:widget_details/pages/Animated/give_a_like.dart';
 import 'package:widget_details/pages/Home/AlertDialog/basic.dart';
 import 'package:widget_details/pages/Home/BuildContext/basic.dart';
+import 'package:widget_details/pages/Home/Canvas/Paint/paint_basic_page.dart';
 import 'package:widget_details/pages/Home/Canvas/basic.dart';
 import 'package:widget_details/pages/Home/Center/align_page.dart';
 import 'package:widget_details/pages/Home/Constraint/basic.dart';
@@ -35,7 +37,6 @@ import 'package:widget_details/pages/demo/Navigtor/page/D.dart';
 import 'package:widget_details/pages/demo/Navigtor/page/E.dart';
 import 'package:widget_details/pages/demo/provider/basic.dart';
 import 'package:widget_details/pages/demo/util/basic.dart';
-import 'package:widget_details/pages/demo/stream/basic.dart';
 
 final routes = {
   '/scaffoldPage': (context) => ScaffoldPage(),
@@ -75,6 +76,9 @@ final routes = {
   '/pageViewPage':(context) =>PageViewPage(),
   '/flow':(context) =>FlowBasicPage(),
   '/streamPage':(context) =>StreamPage(),
+  '/steamBuilder': (context) => SteamBuilderPage(),
+  '/giveALike': (context) => GiveALikePage(),
+  '/paintBasic': (context) => PaintBasicPage(),
 };
 
 final initRoute = '/';
