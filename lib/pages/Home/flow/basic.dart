@@ -42,10 +42,10 @@ class _FlowBasicPageState extends State<FlowBasicPage> {
       body: Flow(
         key: _globalKey,
         delegate: TestFlowDelegate(
-            margin: EdgeInsets.only(left: 0, top: 0, bottom: 12, right: 12),
-            element: context,
-            maxLine: maxLine,
-            gKey: _globalKey),
+          margin: EdgeInsets.only(left: 0, top: 0, bottom: 12, right: 12),
+          element: context,
+          maxLine: maxLine,
+        ),
         children: <Widget>[
           Container(
             padding: EdgeInsets.only(top: 8, left: 16, right: 16, bottom: 8),
@@ -175,7 +175,7 @@ class _FlowBasicPageState extends State<FlowBasicPage> {
           //         )),
 
           GestureDetector(
-            onTap: (){
+            onTap: () {
               setState(() {
                 isMore = !isMore;
               });
@@ -197,13 +197,9 @@ class TestFlowDelegate extends FlowDelegate {
   EdgeInsets margin = EdgeInsets.zero;
   final BuildContext element;
   final int maxLine;
-  final GlobalKey gKey;
 
   TestFlowDelegate(
-      {required this.gKey,
-      required this.maxLine,
-      required this.margin,
-      required this.element});
+      {required this.maxLine, required this.margin, required this.element});
 
   @override
   void paintChildren(FlowPaintingContext context) {
@@ -211,8 +207,6 @@ class TestFlowDelegate extends FlowDelegate {
     var x = margin.left;
     var y = margin.top;
 
-    RenderBox box = gKey.currentContext!.findRenderObject() as RenderBox;
-    Size size = box.size;
     var minLine = 0;
 
     for (int i = 0; i < context.childCount; i++) {

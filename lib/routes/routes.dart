@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:widget_details/pages/Animated/Animatedswitcher.dart';
 import 'package:widget_details/pages/Animated/TweenAnimationBuilder.dart';
 import 'package:widget_details/pages/Animated/basic.dart';
+import 'package:widget_details/pages/Animated/give_a_like.dart';
 import 'package:widget_details/pages/Home/AlertDialog/basic.dart';
 import 'package:widget_details/pages/Home/BuildContext/basic.dart';
+import 'package:widget_details/pages/Home/Canvas/Paint/paint_basic_page.dart';
 import 'package:widget_details/pages/Home/Canvas/basic.dart';
 import 'package:widget_details/pages/Home/Center/align_page.dart';
 import 'package:widget_details/pages/Home/Constraint/basic.dart';
@@ -20,6 +22,7 @@ import 'package:widget_details/pages/Home/Slive/SliverFillRemaining/basic.dart';
 import 'package:widget_details/pages/Home/Slive/SliverPersistentHeader/basic.dart';
 import 'package:widget_details/pages/Home/Slive/basic.dart';
 import 'package:widget_details/pages/Home/Stack/basic.dart';
+import 'package:widget_details/pages/Home/StreamBuilder/basic.dart';
 import 'package:widget_details/pages/Home/TextField/basic.dart';
 import 'package:widget_details/pages/Home/flow/basic.dart';
 import 'package:widget_details/pages/demo/ChangeNotifier/basic.dart';
@@ -68,11 +71,14 @@ final routes = {
   '/stack': (context) => StackPage(),
   '/globalKey': (context) => GlobalKeyPage(),
   '/canvas': (context) => CanvasPage(),
-  '/changeNotifier':(context) =>ChangeNotifierPage(),
-  '/testDebounce':(context) =>TestDebouncePage(),
-  '/centerPage':(context) =>AlignPage(),
-  '/pageViewPage':(context) =>PageViewPage(),
-  '/flow':(context) =>FlowBasicPage(),
+  '/changeNotifier': (context) => ChangeNotifierPage(),
+  '/testDebounce': (context) => TestDebouncePage(),
+  '/centerPage': (context) => AlignPage(),
+  '/pageViewPage': (context) => PageViewPage(),
+  '/flow': (context) => FlowBasicPage(),
+  '/steamBuilder': (context) => SteamBuilderPage(),
+  '/giveALike': (context) => GiveALikePage(),
+  '/paintBasic': (context) => PaintBasicPage(),
 };
 
 final initRoute = '/';

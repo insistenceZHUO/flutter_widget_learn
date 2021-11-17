@@ -13,7 +13,7 @@ class _AnimatedPageState extends State<AnimatedPage> {
         appBar: AppBar(
           title: Text('animated'),
         ),
-        body: Column(
+        body: Wrap(
           children: [
             Center(
               child: AnimatedContainer(
@@ -31,7 +31,7 @@ class _AnimatedPageState extends State<AnimatedPage> {
                   });
                 },
                 child: Text('点击')),
-            Row(
+            Wrap(
               children: [
                 ElevatedButton(
                     onPressed: () {
@@ -42,7 +42,14 @@ class _AnimatedPageState extends State<AnimatedPage> {
                     onPressed: () {
                       Navigator.pushNamed(context, '/tweenAnimationbuilder');
                     },
-                    child: Text('tweenAnimationBuilder'))
+                    child: Text('tweenAnimationBuilder')),
+
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/giveALike');
+                    },
+                    child: Text('点赞功能的设计'))
+
               ],
             )
           ],
