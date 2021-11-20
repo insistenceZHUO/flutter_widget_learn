@@ -17,8 +17,11 @@ class _PaintBasicPageState extends State<PaintBasicPage> {
       body: Container(
         alignment: Alignment.topLeft,
         // color: Colors.blue,
-        child: CustomPaint(
-          painter: PaperPainter(),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: CustomPaint(
+            painter: PaperPainter(),
+          ),
         ),
       ),
     );
@@ -31,7 +34,7 @@ class PaperPainter extends CustomPainter {
     // drawIsAntiAliasColor(canvas);
     // drawStyleStrokeWidth(canvas);
     // drawStrokeCap(canvas);
-    drawStrokeJoin(canvas);
+    // drawStrokeJoin(canvas);
   }
 
   // 测试 isAntiAlias 和 color属性
@@ -58,17 +61,18 @@ class PaperPainter extends CustomPainter {
   void drawStyleStrokeWidth(Canvas canvas) {
     Paint paint = Paint()..color = Colors.red;
     canvas.drawCircle(
-        Offset(180, 180),
-        150,
+        Offset(180, 180), // 偏移;
+        100, // 半径;
         paint
           ..style = PaintingStyle.fill
           ..strokeWidth = 50);
     canvas.drawCircle(
-        Offset(180 + 360.0, 180),
-        150,
-        paint
-          ..strokeWidth = 50
-          ..style = PaintingStyle.fill);
+      Offset(180, 180 + 360.0),
+      150,
+      paint
+        ..strokeWidth = 50
+        ..style = PaintingStyle.fill,
+    );
     //测试线
     canvas.drawLine(
         Offset(0, 180 - 150.0),
@@ -103,8 +107,8 @@ class PaperPainter extends CustomPainter {
   ///  StrokeJoin.miter - 锐角、
   ///  StrokeJoin.round - 圆角
   void drawStrokeJoin(Canvas canvas) {
-    Paint paint =  Paint();
-    Path path =  Path();
+    Paint paint = Paint();
+    Path path = Path();
     paint
       ..style = PaintingStyle.stroke
       ..color = Colors.blue
@@ -115,19 +119,19 @@ class PaperPainter extends CustomPainter {
     path.relativeLineTo(0, 100);
     canvas.drawPath(path, paint..strokeJoin = StrokeJoin.bevel);
 
-    // path.reset();
-    // path.moveTo(50 + 150.0, 50);
-    // path.lineTo(50 + 150.0, 150);
-    // path.relativeLineTo(100, -50);
-    // path.relativeLineTo(0, 100);
-    // canvas.drawPath(path, paint..strokeJoin = StrokeJoin.miter);
+    path.reset();
+    path.moveTo(50 + 150.0, 50);
+    path.lineTo(50 + 150.0, 150);
+    path.relativeLineTo(100, -50);
+    path.relativeLineTo(0, 100);
+    canvas.drawPath(path, paint..strokeJoin = StrokeJoin.miter);
 
-    // path.reset();
-    // path.moveTo(50 + 150.0 * 2, 50);
-    // path.lineTo(50 + 150.0 * 2, 150);
-    // path.relativeLineTo(100, -50);
-    // path.relativeLineTo(0, 100);
-    // canvas.drawPath(path, paint..strokeJoin = StrokeJoin.round);
+    path.reset();
+    path.moveTo(50 + 150.0 * 2, 50);
+    path.lineTo(50 + 150.0 * 2, 150);
+    path.relativeLineTo(100, -50);
+    path.relativeLineTo(0, 100);
+    canvas.drawPath(path, paint..strokeJoin = StrokeJoin.round);
   }
 
   @override
