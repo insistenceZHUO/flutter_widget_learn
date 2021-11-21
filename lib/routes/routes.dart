@@ -75,8 +75,8 @@ final routes = {
   '/centerPage':(context) =>AlignPage(),
   '/pageViewPage':(context) =>PageViewPage(),
   '/flow':(context) =>FlowBasicPage(),
-  '/streamPage':(context) =>StreamPage(),
-  '/steamBuilder': (context) => SteamBuilderPage(),
+  // '/streamPage':(context) =>StreamPage(),
+  // '/steamBuilder': (context) => SteamBuilderPage(),
   '/giveALike': (context) => GiveALikePage(),
   '/paintBasic': (context) => PaintBasicPage(),
 };
