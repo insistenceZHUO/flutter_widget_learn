@@ -8,6 +8,8 @@ import 'package:widget_details/pages/Home/AlertDialog/basic.dart';
 import 'package:widget_details/pages/Home/BuildContext/basic.dart';
 import 'package:widget_details/pages/Home/Canvas/Paint/paint_basic_page.dart';
 import 'package:widget_details/pages/Home/Canvas/basic.dart';
+import 'package:widget_details/pages/Home/Canvas/canvas_basic/canvas_basic_page.dart';
+import 'package:widget_details/pages/Home/Canvas/canvas_basic/canvas_grid_page.dart';
 import 'package:widget_details/pages/Home/Center/align_page.dart';
 import 'package:widget_details/pages/Home/Constraint/basic.dart';
 import 'package:widget_details/pages/Home/Future/basic.dart';
@@ -79,6 +81,8 @@ final routes = {
   // '/steamBuilder': (context) => SteamBuilderPage(),
   '/giveALike': (context) => GiveALikePage(),
   '/paintBasic': (context) => PaintBasicPage(),
+  '/canvasBasic': (context) => CanvasBasicPage(),
+  '/canvasGrid': (context) => CanvasGridPage(),
 };
 
 final initRoute = '/';

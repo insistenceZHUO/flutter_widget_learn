@@ -47,6 +47,18 @@ class _CanvasPageState extends State<CanvasPage> {
                 },
                 child: Text('Paint'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/canvasBasic');
+                },
+                child: Text('CanvasBasicPage'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/canvasGrid');
+                },
+                child: Text('canvasGrid'),
+              ),
               // ElevatedButton(onPressed: () {}, child: Text('Paint')),
             ],
           )
