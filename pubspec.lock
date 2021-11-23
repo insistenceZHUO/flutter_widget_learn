@@ -64,6 +64,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.0.1"
+  ele_progress:
+    dependency: "direct main"
+    description:
+      name: ele_progress
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.1"
+  ele_theme:
+    dependency: transitive
+    description:
+      name: ele_theme
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.1"
   extended_image:
     dependency: transitive
     description:

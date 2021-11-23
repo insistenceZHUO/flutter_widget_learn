@@ -59,6 +59,42 @@ class _CanvasPageState extends State<CanvasPage> {
                 },
                 child: Text('canvasGrid'),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/drawColorBasic');
+                },
+                child: Text('drawColor'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/drawPathBasic');
+                },
+                child: Text('drawPath'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/clipRectBasic');
+                },
+                child: Text('clipRect'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/clipRRectBasic');
+                },
+                child: Text('ClipRRect'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/clipPathBasic');
+                },
+                child: Text('ClipPath'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/drawImageBasic');
+                },
+                child: Text('drawImage'),
+              ),
               // ElevatedButton(onPressed: () {}, child: Text('Paint')),
             ],
           )

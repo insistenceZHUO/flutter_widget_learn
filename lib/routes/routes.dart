@@ -10,6 +10,12 @@ import 'package:widget_details/pages/Home/Canvas/Paint/paint_basic_page.dart';
 import 'package:widget_details/pages/Home/Canvas/basic.dart';
 import 'package:widget_details/pages/Home/Canvas/canvas_basic/canvas_basic_page.dart';
 import 'package:widget_details/pages/Home/Canvas/canvas_basic/canvas_grid_page.dart';
+import 'package:widget_details/pages/Home/Canvas/clipPath/clipPath_basic_page.dart';
+import 'package:widget_details/pages/Home/Canvas/clipRRect/clipRRect_basic_page.dart';
+import 'package:widget_details/pages/Home/Canvas/clipRect/clipRect_basic_page.dart';
+import 'package:widget_details/pages/Home/Canvas/drawColor/drawcolor_basic_page.dart';
+import 'package:widget_details/pages/Home/Canvas/drawImage/drawImage_basic_page.dart';
+import 'package:widget_details/pages/Home/Canvas/drawPath/drawpath_basic_page.dart';
 import 'package:widget_details/pages/Home/Center/align_page.dart';
 import 'package:widget_details/pages/Home/Constraint/basic.dart';
 import 'package:widget_details/pages/Home/Future/basic.dart';
@@ -83,6 +89,12 @@ final routes = {
   '/paintBasic': (context) => PaintBasicPage(),
   '/canvasBasic': (context) => CanvasBasicPage(),
   '/canvasGrid': (context) => CanvasGridPage(),
+  '/drawColorBasic': (context) => DrawColorBasicPage(),
+  '/drawPathBasic': (context) => DrawPathBasicPage(),
+  '/clipRectBasic': (context) => ClipRectBasicPage(),
+  '/clipRRectBasic': (context) => ClipRRectBasicPage(),
+  '/clipPathBasic': (context) => ClipPathBasicPage(),
+  '/drawImageBasic': (context) => DrawImageBasicPage(),
 };
 
 final initRoute = '/';
